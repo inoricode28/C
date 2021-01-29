@@ -16,8 +16,7 @@ void escribir()
  archivo << "Procesador 'CPU' :" << procesador << endl;
  archivo << "Memoria 'RAM' :" << ram << endl;
  archivo << "Disco Duro :" << hdd << endl;
-
-	archivo.close();
+ archivo.close();
 }
 
 int main()
