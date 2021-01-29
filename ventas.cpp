@@ -5,18 +5,18 @@
 using namespace std;
 string nombre, pass, correo, web;
 float cambio,placa,procesador,ram,hdd,video,chasis,monitor,dvd,teclamouse,estabilizador;
-int edad;
+
 
 void escribir()
 {
  ofstream archivo;
  archivo.open("Deltron.txt",ios::out);
 
- if (archivo.fail())
+ /*if (archivo.fail())
  	{
  		cout<<"No se pudo abrir el archivo";
  		exit(1);
-	}
+	}*/
 
  archivo << "Tipo de cambio: " <<  cambio << endl;
  archivo << "Placa Madre :" << placa << endl;
@@ -34,17 +34,22 @@ int main()
  
  cout << "\t\t\tPrograma de Ventas"<<endl;
  cout << "\t\t\t------------------\n"<<endl;
- cout << "Tipo de cambio de la pagina:            "; cin >> cambio;
+ cout << "Tipo de cambio de la pagina:\t\t"; cin >> cambio;
  cout << "\n";
  cout << "* Por el momento TODOS los precios a ingresas son sin IGV\n puede ponerse otro producto diferente a los que dice\n la idea es que se van a comprar juntos todos los items\n la factura tiene ocho espacios, se puede llenar con ceros\n\n";
- cout << "Placa Madre: ";
- cin >> placa;
- cout << "Procesador 'CPU': ";
- cin >> procesador;
- cout << "Memoria 'RAM': ";
- cin >> ram;
- cout << "Disco Duro: ";
- cin >> hdd;
+ cout << "Placa Madre:\t\t"; cin >> placa; 
+ cout << "Procesador 'CPU':\t"; cin >> procesador; 
+ cout << "Memoria 'RAM':\t\t"; cin >> ram; 
+ cout << "Disco Duro:\t\t";  cin >> hdd;
+ cout << "Tarjeta de video:\t";  cin >> video;
+ cout << "Case:\t\t\t";  cin >> chasis;
+ cout << "Monitor:\t\t";  cin >> monitor;
+ cout << "Otros";
+ cout << "\n";
+ cout << "- Unidad Optica:\t";  cin >> dvd;
+ cout << "- Teclado / Mouse:\t";  cin >> teclamouse;
+ cout << "- Estabilizador:\t";  cin >> estabilizador;
+
 	
 	escribir();
  
